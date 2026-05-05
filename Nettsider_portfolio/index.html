@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Petrussen Thu</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Media/Bilder/Portfolio_logo 1.svg" alt="bilde av logo">
+        </div>
+    
+        <nav> <!-- denne koden er nav baren-->
+            <ul>
+                <li><a href="index.html" class="btn active">Hjemmesiden</a></li>
+                <li><a href="MittVerk.html" class="btn">Mine prosjekter</a></li>
+                <li><a href="OmMeg.html" class="btn">Om Meg</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <h1>Matias Petrussen Thu</h1>
+    <h3 id="hilsen" style="color: #ED1C24; font-weight: normal;"></h3>   
+        <div class="image-container">
+            <img src="Media/Bilder/Bilde_av_meg.JPG" class="profile-pic" alt="Bilde av Matias Petrussen Thu">
+        </div>
+</main>
+<footer>
+    <div class="footer-content"> 
+        <h3>Kontaktinformasjon </h3>
+        <p> E-post: <a href="mailto:matias.p.thu@gmail.com">matias.p.thu@gmail.com</a></p>
+        <p>Mobil: +47 966 31 243</p>
+        <p>&copy; <span id="year"></span> Matias Petrussen Thu</p>
+    </div>
+</footer>
+ <script>
+    let hilsenText=document.getElementById("hilsen");
+    let klokka= new Date().getHours();
+    if (klokka < 12 ) {
+        hilsenText.innerText="God Morgen! Velkommen til min portefølje.";
+    } else if (klokka < 18) {
+        hilsenText.innerText="God Ettermiddag! Håper du har en fin dag!";
+    }  else {
+        hilsenText.innerText="God Kveld! Takk for at du stikker innom!";
+    } 
+    let copyrightText = document.getElementById("copyright");
+    let currentYear = new Date().getFullYear();
+    document.getElementById("year").innerText=currentYear;
+ </script>   
+</body>
+</html>
