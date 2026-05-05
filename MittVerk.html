@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine prosjekter</title>
+</head>
+<header>
+        <div class="logo-container">
+            <img src="Media/Bilder/Portfolio_logo 1.svg" alt="bilde av logo">
+        </div>
+    
+        <nav> <!-- denne koden er nav baren-->
+            <ul>
+                <li><a href="index.html" class="btn">Hjemmesiden</a></li>
+                <li><a href="MittVerk.html" class="btn active">Mine prosjekter</a></li>
+                <li><a href="OmMeg.html" class="btn">Om Meg</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Mine Prosjekter</h1>
+        <article class="project-card">
+            <div class="project-image">
+                <img src="Media/Screenshot/FilmManus_Portfolio.png" alt="Skjermbilde av FilmManus prosjekter." class="zoomable">
+            </div>
+            <div class="project-info">
+                <h2>Filmmanus</h2>
+                <p>Jeg har laget flere filmmanus i Trelby.
+                   Jeg har skrevet alt fra komedie til drama, men action er der jeg er best.</p>
+            </div>
+        </article>
+          <article class="project-card">
+            <div class="project-image">
+                <img src="Media/Screenshot/Logo_DesignManual.png" alt="Skjermbilde av DesignManual." class="zoomable">
+            </div>
+            <div class="project-info">
+                <h2>Designmanual</h2>
+                <p> Jeg har også laget en logo for "Økern basket". Når jeg lagde logoen lagde jeg også en design manual med en reklame på også.
+                    Logoen er en punktert basketball fordi i den første kampen Økern basket spilte så klarte ballen og punktere.</p>
+            </div>
+        </article>
+          <article class="project-card">
+            <div class="project-image">
+                <img src="Media/Screenshot/Spill_Mineprosjekter.png" alt="Skjermbilde av spill Matias har laget ." class="zoomable">
+            </div>
+            <div class="project-info">
+                <h2>Master of the weights</h2>
+                <p>Her har jeg laget ett spill med en klassekamerat på figma. Spillet er en ranked simulator. Jo mere du trener jo mere poeng får du. du får også mere poeng for og løfte mere.
+                    Du kan vinne premier som en gratis PT(personlig trener) time eller en gratis måned på treningsenteret ditt. Det er også ett podium for treningssenteret ditt og vennene dine.
+                    Du tar og registrerer treningsstudioet ditt og så kan du se når andre trener og registrere øktene dine. Du kan også endre på innstillingene dine om du ikke vil vise statisikken din til andre.
+                    Spillet heter Master of the weights.</p>
+            </div>
+        </article>
+         <article class="project-card">
+            <div class="project-image">
+                <img src="Media/Screenshot/Oslo_lacrosse_screenshot.png" alt="Skjermbilde av Oslo Lacrosse Matias har laget." class="zoomable">
+            </div>
+            <div class="project-info">
+                <h2>Oslo lacrosse</h2>
+                <p>Jeg har laget en nettside for Oslo Lacrosse. Dette lagde jeg med en klassekamerat.</p>
+            </div>
+               </div>
+        </article>
+         <article class="project-card">
+            <div class="project-image">
+                <img src="Media/Screenshot/escaperoom-spill.png" alt="Skjermbilde av Escape Room-spill som Matias har laget." class="zoomable">
+            </div>
+            <div class="project-info">
+                <h2>Escape Room</h2>
+                <p>Jeg har laget et Escape Room-spill sammen med klassekamerater</p>
+            </div>
+               </div>
+        </article>
+         <article class="project-card">
+            <div class="project-image">
+                <img src="Media/Screenshot/webserver-tutorial.png" alt="Skjermbilde av Matias som sin Powerpoint som viser hvordan man hoster en webserver." class="zoomable">
+            </div>
+            <div class="project-info">
+                <h2>Webserver Tutorial</h2>
+                <p>Jeg har laget en tutorial for hvordan man hoster en webserver.</p>
+            </div>
+    </main>
+    <footer>
+        <div class="footer-content"> 
+            <h3>Kontaktinformasjon </h3>
+            <p> E-post: <a href="mailto:matias.p.thu@gmail.com">matias.p.thu@gmail.com</a></p>
+            <p>Mobil: +47 966 31 243</p>
+            <p>&copy; <span id="year"></span> Matias Petrussen Thu</p>
+        </div>
+    </footer>
+
+    <div id="lightbox-overlay">
+        <span id="close-btn">&times;</span>
+        <img src="" id="lightbox-image">
+    </div>
+
+<script>
+ let copyrightText = document.getElementById("copyright");
+    let currentYear = new Date().getFullYear();
+    document.getElementById("year").innerText=currentYear;
+    
+    const overlay = document.getElementById('lightbox-overlay');
+    const closeBtn = document.getElementById('close-btn');
+    const popupImg = document.getElementById('lightbox-image');
+
+    const triggers = document.querySelectorAll('.zoomable');
+    // 1. hva skjer om jeg klikke på et bilde?
+    triggers.forEach(img =>{
+        img.addEventListener('click', function (){
+            overlay.style.display="flex"; //denne koden viser overlayen.
+            popupImg.src = this.src; //denne koden kopierer bilden inn i overlayen.
+            popupImg.alt = this.alt; //denne koden kopierer all teksten. 
+        });
+    });
+    // 2. lukke funksjon for og skjule overlayen.
+    function closeLightbox(){
+        overlay.style.display = "none";
+    }
+     //lukk når man klikker på X knappen
+     closeBtn.onclick = function() {
+        closeLightbox();
+    }
+     
+
+     //lukk når man klikker på den svarte bakgrunnen utenfor det svarte bildet.
+     overlay.onclick = function(event) {
+        if(event.target === overlay) {
+            closeLightbox();
+        }
+     }
+</script>
+    
+</body>
+</html>

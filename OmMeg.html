@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Meg</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Media/Bilder/Portfolio_logo 1.svg" alt="bilde av logo">
+        </div>
+    
+        <nav> <!-- denne koden er nav baren-->
+            <ul>
+                <li><a href="index.html" class="btn">Hjemmesiden</a></li>
+                <li><a href="MittVerk.html" class="btn">Mine prosjekter</a></li>
+                <li><a href="OmMeg.html" class="btn active">Om Meg</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Om Meg</h1>
+        <div class="om-meg-wrapper">
+            <div class="video-container">
+               <vide o controls width="100%" src="Media/Video/Video_om_meg_portfolio.mp4" type="video/mp4">
+                    NettLeseren din støtter ikke video taggen.
+                </video>
+            </div>
+            <div class="text-container">
+                <h3>About Me</h3>
+                    <p>I grew up in Hellerudtoppen but I moved to Oppegård at the age of 3. </p>
+                    <p> went to elementary school at Greverud skole and middle school Flåtestad skole but I moved to Oslo in 10th grade and started at Skøyenåsen skole.</p> 
+                    <p> My family is kind and supportive, I have a brother, a mom and dad and a dog.</p>
+                    <p> Outside of school I like to play video games and watch shows and movies with my dad and my brother and I like to build Legos and read comics. </p>
+                    <p>I would say I’m a kind person and would always help if someone needs help.</p>
+                    <p> What’s important to me is being the best version of myself that I can and always be kind and help others. I have no goals in life I just take it as it comes and sees where it gets me. I don’t know what I want to work with. </p>
+                    <p>The most interesting thing about me is that when I play a game I like I can reach the top ranks and be one of the best in my country if I really try (I have already in some games). </p>
+                    <p>I use English every day to talk to my online friends and my teammates that I have in game, English is a big part of my life, and I would maybe say I know English better than Norwegian.</p>
+                    <p>I would like to get better at IM, math and science. I learn English best by looking at how you use the words and using them in sentences, but I would say I can learn in any method. </p>
+                    <p>My goal for English is to try and get at least a 5 and I’m always open for feedback.</p>
+                
+            </div>
+        </div>
+    </main>
+ <footer>
+    <div class="footer-content"> 
+        <h3>Kontaktinformasjon </h3>
+        <p> E-post: <a href="mailto:matias.p.thu@gmail.com">matias.p.thu@gmail.com</a></p>
+        <p>Mobil: +47 966 31 243</p>
+        <p>&copy; <span id="year"></span> Matias Petrussen Thu</p>
+    </div>
+</footer>
+<script>
+    let copyrightText = document.getElementById("copyright");
+    let currentYear = new Date().getFullYear();
+    document.getElementById("year").innerText=currentYear;
+</script>
+</body>
+</html>
